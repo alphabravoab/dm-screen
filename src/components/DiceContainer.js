@@ -6,29 +6,26 @@ const styles = {
     diceRow: {
         display: 'flex',
         width: '80%',
+        backgroundColor: '#d6c8ab',
+        maxHeight: '60px',
         marginLeft: 'auto',
         marginRight: 'auto',
-        backgroundColor: 'orange',
         marginBottom: '10px',
         textAlign: 'center',
         justifyContent: 'space-evenly',
+        border: '2px inset'
     },
     kind: {
-        marginTop: '60px',
+        margin: 'auto 5px auto 5px',
     }
 }
+
+const dices = [{name: 'D20', sides: 20}, {name: 'D12', sides: 12}, {name: 'D10', sides: 10}, {name: 'D%', sides: 100},  {name: 'D8', sides: 8}, {name: 'D4', sides: 4}]
 
 const DiceContainer = ({classes}) => {
     return (
         <div>
-            <div className={classes.diceRow}><div className={classes.kind}>D20</div> <DiceRoll sides={20} /></div> 
-            <div className={classes.diceRow}><div className={classes.kind}>D12</div> <DiceRoll sides={12} /></div> 
-            <div className={classes.diceRow}><div className={classes.kind}>D10</div> <DiceRoll sides={10} /></div> 
-            <div className={classes.diceRow}><div className={classes.kind}>D%</div> <DiceRoll sides={100} /></div> 
-            <div className={classes.diceRow}><div className={classes.kind}>D8</div> <DiceRoll sides={8} /></div> 
-            <div className={classes.diceRow}><div className={classes.kind}>D6</div> <DiceRoll sides={6} /></div> 
-            <div className={classes.diceRow}><div className={classes.kind}>D4</div> <DiceRoll sides={4} /></div> 
-            
+            {dices.map(dice=> <div className={classes.diceRow}><div className={classes.kind}>{dice.name}</div> <DiceRoll sides={dice.sides} /></div> )}   
         </div>
     )
 }

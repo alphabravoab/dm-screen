@@ -3,34 +3,31 @@ import {withStyles} from 'react-jss'
 
 const styles = {
     diceFlag: {
+        margin: '5px',
         width: '40px',
         backgroundColor: '#b80b0b',
         color: 'white',
         height: '20px',
         textAlign: 'center',
-        padding: '20px 0',
-        display: 'flex',
-        justifyContent: 'space-between',
+        padding: '10px 0',
+        position: 'relative',
+        borderRadius: '0 0 15px 15px',
     },
     stripe: {
-        height: '20px',
+        height: '5px',
+        width: '40px',
+        justifySelf: 'flex-start',
+        position: 'absolute',
+        top: 0,
         alignSelf: 'flex-start',
-        width: '5px',
+        
         backgroundColor: 'blue',
     },
-    bottom: {
-        height: 0,
-        borderLeft: "10px solid transparent",
-        borderRight: "10px solid transparent",
-        borderTop: "10px solid #b80b0b"
-    }
 }
 
 const Dice = ({value, classes}) => {
-    return(<div>
-        <div className={classes.diceFlag}><div className={classes.stripe}></div>{value}<div className={classes.stripe}></div></div>
-        <div className={classes.bottom}></div>
-        </div>
+    return ( 
+        <div className={classes.diceFlag}><div className={classes.stripe}></div>{value}</div>    
     )
 }
 

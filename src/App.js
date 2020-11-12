@@ -1,12 +1,21 @@
 import React from "react"
+import {withStyles} from 'react-jss'
 import DiceContainer from './components/DiceContainer'
-const App = () => {
+
+const styles = {
+    main: {
+        backgroundColor: '#ECDDBF',
+        border: 0,
+        minHeight: '100vh',
+    }
+}
+
+const App = ({classes}) => {
     return (
-        <div>
+        <div className={classes.main}>
             <DiceContainer />
-            hello from react
         </div>
     )
 }
 
-export default App
+export default withStyles(styles)(App)
