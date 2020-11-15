@@ -20,7 +20,7 @@ const styles = {
     }
 }
 
-const dices = [{name: 'D20', sides: 20}, {name: 'D12', sides: 12}, {name: 'D10', sides: 10}, {name: 'D%', sides: 100},  {name: 'D8', sides: 8}, {name: 'D4', sides: 4}]
+const dices = [{name: 'D20', sides: 20}, {name: 'D12', sides: 12}, {name: 'D10', sides: 10}, {name: 'D%', sides: 100},  {name: 'D8', sides: 8}, {name: 'D6', sides: 6}, {name: 'D4', sides: 4}]
 
 const DiceContainer = ({classes}) => {
     return (
