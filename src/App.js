@@ -1,6 +1,7 @@
 import React from "react"
 import {withStyles} from 'react-jss'
 import DiceContainer from './components/diceRolling/DiceContainer'
+import CharacterAdvancement from "./components/Rules/CharacterAdvancement"
 
 const styles = {
     main: {
@@ -14,6 +15,7 @@ const App = ({classes}) => {
     return (
         <div className={classes.main}>
             <DiceContainer />
+            <CharacterAdvancement />
         </div>
     )
 }
