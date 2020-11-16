@@ -37,7 +37,9 @@ const DiceRoll = ({sides, classes}) => {
     }, [rolls])
 
     const rolling = () => {
-        startRoll(makeRolls())    
+        if(numberOfDice<0){
+            startRoll(makeRolls())
+        }    
     }
     return (
         <div className={classes.diceRow}>
