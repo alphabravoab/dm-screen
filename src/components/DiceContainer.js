@@ -25,9 +25,9 @@ const dices = [{name: 'D20', sides: 20}, {name: 'D12', sides: 12}, {name: 'D10',
 const DiceContainer = ({classes}) => {
     return (
         <div>
-            {dices.map(dice=> <div className={classes.diceRow}><div className={classes.kind}>{dice.name}</div> <DiceRoll sides={dice.sides} /></div> )}   
+            {dices.map(dice=> <div key={dice.name} className={classes.diceRow}><div className={classes.kind}>{dice.name}</div> <DiceRoll sides={dice.sides} /></div> )}   
         </div>
     )
 }
-// 
+
 export default withStyles(styles)(DiceContainer)

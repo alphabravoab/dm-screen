@@ -23,11 +23,18 @@ const styles = {
         
         backgroundColor: 'blue',
     },
+    total: {
+        fontSize: 'xx-small',
+    },
 }
 
-const Dice = ({value, classes}) => {
+const Dice = ({value, isTotal, classes}) => {
     return ( 
-        <div className={classes.diceFlag}><div className={classes.stripe}></div>{value}</div>    
+        <div className={classes.diceFlag}>
+            <div className={classes.stripe}></div>
+            {isTotal && <div className={classes.total}>Total</div>}
+            {value}
+        </div>    
     )
 }
 
