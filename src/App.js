@@ -1,6 +1,6 @@
 import React from "react"
 import {withStyles} from 'react-jss'
-import DiceContainer from './components/DiceContainer'
+import DiceContainer from './components/diceRolling/DiceContainer'
 
 const styles = {
     main: {
