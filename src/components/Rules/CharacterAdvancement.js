@@ -8,10 +8,18 @@ const style = {
     },
     table: {
         width: '100%',
+        "&>:nth-child(1)": {
+            backgroundColor: 'orange',
+        }
     },
-    highlight: {
-        backgroundColor: 'orange',
-        margin: 0
+    baseTable: {
+        textAlign: 'center',
+        "&>:nth-child(n+5):nth-child(-n+8)": {
+            backgroundColor: 'orange',
+        },
+        "&>:nth-child(n+13):nth-child(-n+16)": {
+            backgroundColor: 'orange',
+        }
     }
 
 }
@@ -21,7 +29,7 @@ const CharacterAdvancement = ({classes}) => {
             <Header color="red"> Character advancment</Header>
             <table className={classes.table}>
                 <thead><tr><th>XP</th><th>level</th><th>prof bonus</th></tr></thead>
-                <tbody>
+                <tbody className={classes.baseTable}>
                     <tr><td>0</td><td>1</td><td>+2</td></tr>
                     <tr><td>300</td><td>2</td><td>+2</td></tr>
                     <tr><td>900</td><td>3</td><td>+2</td></tr>
